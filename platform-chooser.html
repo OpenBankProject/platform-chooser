@@ -1,0 +1,71 @@
+<link rel="import" href="../polymer-jsonp/polymer-jsonp.html">
+<link rel="import" href="../paper-toggle-button/paper-toggle-button.html">
+
+<!--
+Element providing solution to no problem in particular.
+
+##### Example
+
+    <platform-chooser></platform-chooser>
+
+@element platform-chooser
+@blurb Element providing solution to no problem in particular.
+@status alpha
+@homepage http://azd325.github.io/platform-chooser
+@author Tim Kleinschmidt
+-->
+<polymer-element name="platform-chooser" attributes="notitle">
+
+  <template>
+
+    <link rel="stylesheet" href="platform-chooser.css" />
+
+    <polymer-jsonp id="ajax" auto url="{{url}}?callback="></polymer-jsonp>
+
+    <content>
+        <template id="platforms" repeat="{{item in platforms}}" index="i">
+            <div id="{{item.index}}" class="item" style="width: 200px;">
+                <p>{{item.name}}</p>
+                <paper-toggle-button checked></paper-toggle-button>
+            </div>
+        </template>
+    </content>
+
+  </template>
+
+  <script>
+
+    Polymer('platform-chooser', {
+    /**
+     * The array of platforms
+     *
+     * @attribute platforms
+     * @type array
+     * @default []
+     */
+      platforms: [],
+    /**
+     * A string to the api host
+     *
+     * @attribute url
+     * @type string
+     * @default "http://localhost:8000/api/platforms/"
+     */
+      url: "http://localhost:8000/api/platforms/",
+
+      ready: function() {
+        this.$.platforms.model = this.platforms;
+        this.$.ajax.addEventListener('polymer-response',
+            function (e) {
+                console.log(e.detail.response);
+                this.platforms = {platforms: e.detail.response};
+                this.$.platforms.model = {platforms: e.detail.response};
+                this.fire('platform-chooser-load', {response: e.detail.response});
+            }.bind(this)
+        );
+      },
+    });
+
+  </script>
+
+</polymer-element>
