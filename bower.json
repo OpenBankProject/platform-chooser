@@ -8,8 +8,8 @@
   ],
   "main": "platform-chooser.html",
   "dependencies": {
-    "polymer": "Polymer/polymer#^0.4.0",
-    "polymer-jsonp": "Polymer/polymer-jsonp#~0.3.0",
-    "paper-toggle-button": "Polymer/paper-toggle-button#~0.4.0"
+    "polymer": "Polymer/polymer#master",
+    "polymer-jsonp": "Polymer/polymer-jsonp#master",
+    "paper-toggle-button": "Polymer/paper-toggle-button#master"
   }
 }
