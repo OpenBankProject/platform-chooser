@@ -14,7 +14,7 @@ Element providing solution to no problem in particular.
 @homepage http://azd325.github.io/platform-chooser
 @author Tim Kleinschmidt
 -->
-<polymer-element name="platform-chooser" attributes="notitle">
+<polymer-element name="platform-chooser" attributes="url">
 
   <template>
 
@@ -36,13 +36,6 @@ Element providing solution to no problem in particular.
   <script>
 
     Polymer('platform-chooser', {
-    /**
-     * The array of platforms
-     *
-     * @attribute platforms
-     * @type array
-     * @default []
-     */
       platforms: [],
     /**
      * A string to the api host
@@ -51,13 +44,12 @@ Element providing solution to no problem in particular.
      * @type string
      * @default "http://localhost:8000/api/platforms/"
      */
-      url: "http://localhost:8000/api/platforms/",
+      url: 'http://localhost:8000/api/platforms/',
 
       ready: function() {
         this.$.platforms.model = this.platforms;
         this.$.ajax.addEventListener('polymer-response',
             function (e) {
-                console.log(e.detail.response);
                 this.platforms = {platforms: e.detail.response};
                 this.$.platforms.model = {platforms: e.detail.response};
                 this.fire('platform-chooser-load', {response: e.detail.response});
