@@ -8,8 +8,7 @@
   ],
   "main": "platform-chooser.html",
   "dependencies": {
-    "polymer": "Polymer/polymer#master",
-    "polymer-jsonp": "Polymer/polymer-jsonp#master",
-    "paper-toggle-button": "Polymer/paper-toggle-button#master"
+    "paper-toggle-button": "Polymer/paper-toggle-button",
+    "polymer-jsonp": "Azd325/polymer-jsonp"
   }
 }
