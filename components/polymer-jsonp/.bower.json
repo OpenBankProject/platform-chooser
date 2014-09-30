@@ -1,0 +1,18 @@
+{
+  "name": "polymer-jsonp",
+  "private": true,
+  "dependencies": {
+    "polymer": "Polymer/polymer"
+  },
+  "homepage": "https://github.com/Azd325/polymer-jsonp",
+  "version": "0.4.0",
+  "_release": "0.4.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.4.0",
+    "commit": "5e75adf988d11f056926bd189cf13f476379a324"
+  },
+  "_source": "git://github.com/Azd325/polymer-jsonp.git",
+  "_target": "*",
+  "_originalSource": "Azd325/polymer-jsonp"
+}

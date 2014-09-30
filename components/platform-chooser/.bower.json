@@ -1,0 +1,24 @@
+{
+  "name": "platform-chooser",
+  "keywords": [
+    "seed",
+    "polymer",
+    "web-components"
+  ],
+  "main": "platform-chooser.html",
+  "dependencies": {
+    "paper-toggle-button": "Polymer/paper-toggle-button",
+    "polymer-jsonp": "Azd325/polymer-jsonp"
+  },
+  "homepage": "https://github.com/OpenBankProject/platform-chooser",
+  "_release": "3c2f7fd555",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "3c2f7fd5552030c91bcc40d0ca2e547c68239ac6"
+  },
+  "_source": "git://github.com/OpenBankProject/platform-chooser.git",
+  "_target": "master",
+  "_originalSource": "OpenBankProject/platform-chooser",
+  "_direct": true
+}

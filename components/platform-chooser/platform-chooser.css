@@ -1,0 +1,8 @@
+:host {
+  display: block;
+  margin: 1em;
+}
+
+paper-toggle-button::shadow paper-radio-button::shadow #onRadio {
+  background-color: #81BA70;
+}

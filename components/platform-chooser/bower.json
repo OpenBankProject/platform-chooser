@@ -1,0 +1,14 @@
+{
+  "name": "platform-chooser",
+  "version": "0.0.0",
+  "keywords": [
+    "seed",
+    "polymer",
+    "web-components"
+  ],
+  "main": "platform-chooser.html",
+  "dependencies": {
+    "paper-toggle-button": "Polymer/paper-toggle-button",
+    "polymer-jsonp": "Azd325/polymer-jsonp"
+  }
+}
